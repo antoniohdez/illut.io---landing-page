@@ -1,0 +1,22 @@
+#﻿<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{HTTP_HOST} ^illut.io$ [NC,OR]
+#RewriteCond %{REQUEST_URI} !public/
+#RewriteRule (.*) /public/$1 [L]
+
+#</IfModule>
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond $1 !^(pato|prodisplay|clientes|cdmxtiempo|webapps|test|includes|bic|bicbeta|bicbeta2|geodisplay|feria|partners|google04c785c58a5b159e.html|FaceDemo|smartbc|videoacceso|beta|assets|projects|index.html)
+
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
+</IfModule>
+
+
+
+
+
+
