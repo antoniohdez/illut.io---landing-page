@@ -14,6 +14,7 @@ $email    = $_POST['email'];
 $message = $_POST['message'];
 
 if(trim($name) == '') {
+<<<<<<< HEAD
 	echo '<div class="notification error clearfix"><p><strong>Attention!</strong> You must enter your name.</p></div>';
 	exit();
 } else if(trim($email) == '') {
@@ -21,11 +22,24 @@ if(trim($name) == '') {
 	exit();
 } else if(!isEmail($email)) {
 	echo '<div class="notification error clearfix"><p><strong>Attention!</strong> You have entered an invalid e-mail address, try again.</p></div>';
+=======
+	echo '<div class="notification error clearfix"><p><strong>Attention!</strong> Debes introducir un nombre.</p></div>';
+	exit();
+} else if(trim($email) == '') {
+	echo '<div class="notification error clearfix"><p><strong>Attention!</strong> Introduce un email válido.</p></div>';
+	exit();
+} else if(!isEmail($email)) {
+	echo '<div class="notification error clearfix"><p><strong>Attention!</strong> Has ingresado un email válido, intenta de nuevo.</p></div>';
+>>>>>>> FETCH_HEAD
 	exit();
 }
 
 if(trim($message) == '') {
+<<<<<<< HEAD
 	echo '<div class="notification error clearfix"><p><strong>Attention!</strong> Please enter your message.</p></div>';
+=======
+	echo '<div class="notification error clearfix"><p><strong>Attention!</strong> Por favor ingresa tu mensaje.</p></div>';
+>>>>>>> FETCH_HEAD
 	exit();
 } 
 
@@ -38,7 +52,11 @@ if(get_magic_quotes_gpc()) {
 // Enter the email address that you want to emails to be sent to.
 // Example $address = "joe.doe@yourdomain.com";
 
+<<<<<<< HEAD
 $address = "info@cretecbg.com";
+=======
+$address = "info@illut.io";
+>>>>>>> FETCH_HEAD
 
 
 // Configuration option.
@@ -46,16 +64,26 @@ $address = "info@cretecbg.com";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
+<<<<<<< HEAD
 $e_subject = 'You\'ve been contacted by ' . $name . '.';
+=======
+$e_subject = 'Has sido contactado por ' . $name . '.';
+>>>>>>> FETCH_HEAD
 
 
 // Configuration option.
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
+<<<<<<< HEAD
 $e_body = "You have been contacted by $name , their message is as follows." . PHP_EOL . PHP_EOL;
 $e_content = "\"$message\"" . PHP_EOL . PHP_EOL;
 $e_reply = "You can contact $name via email, $email";
+=======
+$e_body = "Has sido contactado por $name , su mensaje es el siguiente:" . PHP_EOL . PHP_EOL;
+$e_content = "\"$message\"" . PHP_EOL . PHP_EOL;
+$e_reply = "Puedes contactar a $name via email, $email";
+>>>>>>> FETCH_HEAD
 
 $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 
@@ -71,7 +99,11 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo "<fieldset>";
 	echo "<div id='success_page'>";
+<<<<<<< HEAD
 	echo "<div class='notification success clearfix'><p>Thank you <strong>$name</strong>, your message has been submitted to us.</p></div>";
+=======
+	echo "<div class='notification success clearfix'><p>Gracias <strong>$name</strong>, Tu mensaje a sido enviado.</p></div>";
+>>>>>>> FETCH_HEAD
 	echo "</div>";
 	echo "</fieldset>";
 
