@@ -38,7 +38,7 @@ if(get_magic_quotes_gpc()) {
 // Enter the email address that you want to emails to be sent to.
 // Example $address = "joe.doe@yourdomain.com";
 
-$address = "info@illut.io";
+$address = "info@illutio.co.uk";
 
 
 // Configuration option.
@@ -46,14 +46,14 @@ $address = "info@illut.io";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-$e_subject = 'ILLUTIO\'Has sido contactado por ' . $name . '.';
+$e_subject = 'ILLUTIO\' you have been contacted by ' . $name . '.';
 
 
 // Configuration option.
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "Has sido contactado por  $name , con el siguiente mensaje" . PHP_EOL . PHP_EOL;
+$e_body = "you have been contacted by  $name , con el siguiente mensaje" . PHP_EOL . PHP_EOL;
 $e_content = "\"$message\"" . PHP_EOL . PHP_EOL;
 $e_reply = "You can contact $name via email, $email";
 
@@ -71,7 +71,7 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo "<fieldset>";
 	echo "<div id='success_page'>";
-	echo "<div class='notification success clearfix'><p>Gracias por contactarnos <strong>$name</strong>,hemos recibido tu mensaje exitosamente.</p></div>";
+	echo "<div class='notification success clearfix'><p>Thanks for contact us  <strong>$name</strong>,we have recieved your message, our team will contact you.</p></div>";
 	echo "</div>";
 	echo "</fieldset>";
 
