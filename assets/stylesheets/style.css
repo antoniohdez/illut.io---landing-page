@@ -230,6 +230,10 @@ nav {
     filter: alpha(opacity=50);
 }
 
+
+
+
+
 .desktop.navigation .nav-content a:hover, .desktop.navigation .nav-content a.active  { opacity: 1; filter: alpha(opacity=100); }
 
 .desktop.navigation .nav-content li:last-of-type { margin-right: 0px; }
